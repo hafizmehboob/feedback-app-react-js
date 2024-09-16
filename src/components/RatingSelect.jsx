@@ -74,17 +74,6 @@ function RatingSelect({select, rating}) {
       <li>
         <input 
           type="radio"
-          id="num5"
-          name="rating"
-          value="5"
-          onChange={handleChange}
-          checked={selected === 5}
-          />
-          <label htmlFor='num5'>5</label>
-      </li>
-      <li>
-        <input 
-          type="radio"
           id="num6"
           name="rating"
           value="6"

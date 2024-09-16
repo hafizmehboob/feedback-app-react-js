@@ -19,8 +19,6 @@ function FeedbackForm() {
       setRating(feedbackEdit.item.rating);
     }
   },[feedbackEdit]);
-
-
   const hanldeTextChange = (e) => {
     if(text === ''){
         setIsDisabled(true);
@@ -38,12 +36,13 @@ function FeedbackForm() {
       e.preventDefault();
       if(text.trim().length > 10){
         const newFeedback = {
-          text,
-          rating
+          rating,
+          text
         }
         if(feedbackEdit.edit == true){
           updateFeedback(feedbackEdit.item.id, newFeedback);
         }else{
+          console.log(newFeedback);
           addFeedback(newFeedback);
         }
         setText('');
@@ -62,7 +61,5 @@ function FeedbackForm() {
         {message && <div className='message'>{ message }</div>}
     </Card>
   );
-
 }
-
-export default FeedbackForm
+export default FeedbackForm;
